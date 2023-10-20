@@ -11,6 +11,24 @@
     <link rel="stylesheet" href = "styles.css" /> 
 
 
+
+
+
+
+    <meta charset=""UTF-8">
+    <meta name=""viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text typing effect</title>
+    <style>
+        .text{
+            font-family: 'Lexend', sans-serif;
+            font-weight: 500;
+            line-height: 1.5;
+            max-width: 300px;
+            padding: 1em;
+        }
+    </style>
+
+
 </head>
 
 
@@ -19,8 +37,31 @@
 
     <!-- <a href="wealth.html" style="border-radius: 1000px; text-decoration: none;">WEALTH</a> -->
 
-          <!-- <button onclick = "openWealth()" style ="background-color:#333333;color:chartreuse;border-radius:1000px"> -->
-    </button>
+  <!-- <button onclick = "openWealth()" style ="background-color:#333333;color:chartreuse;border-radius:1000px"> </button>-->
+
+
+
+    <div class ="text"></div>
+    <script>
+    
+        const div = document.querySelector(".text")
+        const text = "This is how you create a text typing effect with JavaScript"
+
+
+        function textTypingEffect(element, text, i =0){
+            element.textContent += text[i];
+        
+        }
+        
+
+        textTypingEffect(div, text, 8);
+    
+    </script>
+
+
+
+
+
 
     <input id="clickMe" type="button" value="clickme" onclick="doFunction();" />
 
@@ -68,17 +109,7 @@
     <div class="box"></div>
 
 
-    
-
-
-
 
 
 </body>
-
-
-
-
-
-
 </html>
