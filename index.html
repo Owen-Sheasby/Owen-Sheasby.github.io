@@ -37,7 +37,7 @@
 
 
     <script>
-    <const text:style="color:red;">This is a paragraph.</const> /// this doesnt work
+    //<const text:style="color:red;">This is a paragraph.</const> /// this doesnt work
     
     </script>
     
@@ -45,9 +45,9 @@
     <script>
     
         const div = document.querySelector(".text")
-        const text = "Welcome" // this holds the welcome text
+        var text = "Welcome" // this holds the welcome text
         
-        <const text style ="color:#000000">Welcome</const> //changing color
+        //<const text style ="color:#000000">Welcome</const> //changing color
 
         function textTypingEffect(element, text, i =0){
             if (i === 0){
@@ -117,7 +117,7 @@
     if (choice = "wealth"){
     
         const div = document.querySelector(".text")
-        const text = "You chose wealth. press "X" to go back"
+        const text = "You chose wealth. press 'X' to go back"
 
 
         function textTypingEffect(element, text, i =0){
@@ -141,7 +141,7 @@
         else if (choice = "mental health"){
     
         const div = document.querySelector(".text")
-        const text = "You chose mental health. press "X" to go back"
+        const text = "You chose mental health. press 'X' to go back";
 
 
         function textTypingEffect(element, text, i =0){
