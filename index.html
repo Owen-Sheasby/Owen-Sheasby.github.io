@@ -23,6 +23,26 @@
             padding: 1em;
             color:rgb(60, 255, 0)
         }
+
+
+
+
+        .mainText{
+            font-family: 'Lexend', sans-serif;
+            font-weight: 500;
+            line-height: 1.5;
+            max-width: 300px;
+            padding: 1em;
+            color:rgb(60, 255, 0)
+        }
+
+
+
+
+
+
+
+
     </style>
 
 
@@ -76,7 +96,7 @@
     <input id="clickMe" type="button" value="clickme" onclick="doFunction();" />
 
     <button style ="background-color:#333333;color:chartreuse;border-radius:1000px; width: 75px; height: 30px;" type="button" onclick="location.href='wealth.html' ;" value="Go to wealth">WEALTH</button>
-    <button style ="background-color:#333333;color:chartreuse;border-radius:100px; width: 150px; height: 30px;" type="button" onclick="location.href='wealth.html' ;" value="Go to wealth">MAKING DESICIONS</button>
+    <button style ="background-color:#333333;color:chartreuse;border-radius:100px; width: 150px; height: 30px;" type="button" onclick="choice"='making Decisions' ;" value="Go to wealth">MAKING DESICIONS</button>
     <button style ="background-color:#333333;color:chartreuse;border-radius:10px; width: 150px; height: 30px;" type="button" onclick= "choiceFunction()">HEALTH & FITNESS</button>
 
     <!-- <p id="test">Home</p> -->
@@ -117,7 +137,7 @@
     if (choice = "wealth"){
     
         const div = document.querySelector(".text")
-        const text = "You chose wealth. press 'X' to go back"
+        var text = "You chose wealth. press 'X' to go back"
 
 
         function textTypingEffect(element, text, i =0){
@@ -163,6 +183,37 @@
         textTypingEffect(div, text);}
         
             }
+
+
+
+    
+    
+    
+    else if (choice = "making descisions"){
+    
+    const div = document.querySelector(".text")
+    var text = "You chose making descitions. press 'X' to go back";
+    console.log(text)
+
+
+    function textTypingEffect(element, text, i =0){
+        if (i === 0){
+            element.textContent = "";
+            
+        }
+                    
+        element.textContent += text[i];
+
+        if (i === text.length - 1) {
+            return;
+        }
+        
+        setTimeout(() => textTypingEffect(element, text, i + 1), 50);
+    }
+    
+    textTypingEffect(div, text);}
+    
+        }
     
     </script>
 
