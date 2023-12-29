@@ -113,6 +113,38 @@
 
 
 
+
+    <script> function healthNFitnessFunction(){
+    
+
+    const div = document.querySelector(".text")
+    var text = "You chose health & fitness" // this holds the welcome text
+    
+    
+
+    function textTypingEffect(element, text, i =0){
+        if (i === 0){
+            element.textContent = "";
+            
+        }
+                    
+        element.textContent += text[i];
+
+        if (i === text.length - 1) {
+            return;
+        }
+        
+        setTimeout(() => textTypingEffect(element, text, i + 1), 50);
+    }
+    
+    textTypingEffect(div, text);}
+
+    </script>
+
+
+
+
+
     <script> function choiceFunction(){choice = "Wealth"
     console.log("You chose fitness")
     alert("You chose fitness");}</script>
