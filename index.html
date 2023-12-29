@@ -103,12 +103,12 @@
 
 
 
-    <button style ="background-color:#333333;color:chartreuse;border-radius:1000px; width: 150px; height: 30px;" type="button" onclick="mentalHealth()">Mental Heath</button>
+    <button style ="background-color:#333333;color:chartreuse;border-radius:1000px; width: 150px; height: 30px;" type="button" onclick="mentalHealthFunction()">Mental Heath</button>
     <button style ="background-color:#333333;color:chartreuse;border-radius:1000px; width: 150px; height: 30px;" type="button" onclick="productivityFunction()">productivity</button>
 
 
     <script> function myFunction() {alert("you chose mental health");}</script>
-    <script> function myFunction() {alert("you chose mental health");}; function mentalHealth() {alert("you chose mental health")}</script>
+    <!----<script> function myFunction() {alert("you chose mental health");}; function mentalHealth() {alert("you chose mental health")}</script> -->
     <script> function productivityFunction() {alert("you chose productivity");}</script>
 
 
@@ -140,6 +140,40 @@
     textTypingEffect(div, text);}
 
     </script>
+
+
+
+
+
+    <script> function mentalHealthFunction(){
+        
+        const div = document.querySelector(".text")
+        var text = "You chose mental health" // this holds the welcome text
+        
+        
+        
+        function textTypingEffect(element, text, i =0){
+            
+            if (i === 0){
+                
+                element.textContent = "";
+            
+        }
+                    
+            element.textContent += text[i];
+
+            if (i === text.length - 1) {
+                return;
+        }
+        
+        setTimeout(() => textTypingEffect(element, text, i + 1), 50);
+    }
+    
+    textTypingEffect(div, text);}
+
+    </script>
+
+
 
 
 
