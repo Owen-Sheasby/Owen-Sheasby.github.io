@@ -85,6 +85,33 @@
         }
         
         textTypingEffect(div, text);
+
+
+
+
+
+
+        var text = "What area would you like to improve?"
+
+
+        function textTypingEffect(element, text, i =0){
+            //if (i === 0){
+            //    element.textContent = "";
+                
+            }
+                        
+            element.textContent += text[i];
+
+            if (i === text.length - 1) {
+                return;
+            }
+            
+            setTimeout(() => textTypingEffect(element, text, i + 1), 50);
+        }
+        
+        textTypingEffect(div, text);
+
+
     
     </script>
 
@@ -292,8 +319,7 @@
 
 
 
-    //<p> Fortunes require leverage. Leverage comes from labour, capital or products with no marginal cost of replication (code and media) - Naval Ravikant</p>
-    //<t>"HELLO"</t>
+    
 
     <div class="box"></div>
 
