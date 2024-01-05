@@ -60,6 +60,37 @@
 
 
 <body>
+
+
+
+    <script>
+    
+        const div = document.querySelector(".text")
+        var text = "You chose wealth" // this holds the text that is typed out when the user enters the wealth page
+        
+
+        function textTypingEffect(element, text, i =0){
+            if (i === 0){
+                element.textContent = "";
+                
+            }
+                        
+            element.textContent += text[i];
+
+            if (i === text.length - 1) {
+                return;
+            }
+            
+            setTimeout(() => textTypingEffect(element, text, i + 1), 50);
+        }
+        
+        textTypingEffect(div, text);
+
+
+
+
+    
+    </script>
     
     
     
