@@ -5,7 +5,38 @@
 <body style="background-color:black;">
 
 
-    <button style ="background-color:#333333;color:chartreuse;border-radius:1000px; width: 75px; height: 30px;" type="button" onclick="location.href='index.html' ;" value="Go to start page">HOME</button>
+    <script> function healthNFitnessQuote(){
+    
 
+    const div = document.querySelector(".text")
+    var text = "diet and exercise because you love your body, not because you hate it" // this holds the text that will be typed out 
+    
+    
+
+    function textTypingEffect(element, text, i =0){
+        if (i === 0){
+            element.textContent = "";
+            
+        }
+                    
+        element.textContent += text[i];
+
+        if (i === text.length - 1) {
+            return;
+        }
+        
+        setTimeout(() => textTypingEffect(element, text, i + 1), 50);
+    }
+    
+    healthNFitnessQuote(div, text);}
+
+    </script>
+
+
+
+
+    <button style ="background-color:#333333;color:chartreuse;border-radius:1000px; width: 75px; height: 30px;" type="button" onclick="location.href='index.html' ;" value="Go to start page">HOME</button>
+    <button style ="background-color:#333333;color:chartreuse;border-radius:1000px; width: 75px; height: 30px;" type="button" onclick="location.href='Nutrition.html' ;" value="Go to start page">Nutrition</button>
+    <button style ="background-color:#333333;color:chartreuse;border-radius:1000px; width: 75px; height: 30px;" type="button" onclick="location.href='exercise.html' ;" value="Go to start page">exercise</button>
 
 </body>
