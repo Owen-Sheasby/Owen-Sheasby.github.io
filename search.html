@@ -3,7 +3,23 @@
 
 <head>
 
-    <link rel="stylesheet" href = "styles.css" />
+    <!--<link rel="stylesheet" href = "styles.css" /> -->
+    <style>
+        table {
+          border-spacing: 0;
+          width: 100%;
+          border: 1px solid #ddd;
+        }
+        
+        th, td {
+          text-align: left;
+          padding: 16px;
+        }
+        
+        tr:nth-child(even) {
+          background-color: #f2f2f2
+        }
+        </style>
 
 
 
@@ -56,11 +72,12 @@
 
     <button style ="background-color:#333333;color:chartreuse;border-radius:1000px; width: 75px; height: 30px;" type="button" onclick="location.href='index.html' ;" value="Go to start page">HOME</button>
     <button style ="background-color:#333333;color:chartreuse;border-radius:1000px; width: 75px; height: 30px;" type="button" onclick="sortAZ()"; value="Go to start page">Sort A-Z</button>
-    <button style ="background-color:#333333;color:chartreuse;border-radius:1000px; width: 75px; height: 30px;" type="button" onclick=";" value="Go to start page">Sort Z-A</button>
-    <button style ="background-color:#333333;color:chartreuse;border-radius:1000px; width: 75px; height: 30px;" type="button" onclick="location.href='index.html' ;" value="Go to start page">Sort by topic</button>
+    <button style ="background-color:#333333;color:chartreuse;border-radius:1000px; width: 75px; height: 30px;" type="button" onclick="sortZA();" value="Go to start page">Sort Z-A</button>
+    <button style ="background-color:#333333;color:chartreuse;border-radius:1000px; width: 75px; height: 30px;" type="button" onclick="sortByTopic() ;" value="Go to start page">Sort by topic</button>
 
 
-
+    <p>Click the button to sort the table alphabetically, by name:</p>
+    <p><button onclick="sortTable()">Sort</button></p>
 
 
 
@@ -68,40 +85,11 @@
 
 
         const topicWithLinks = ["wealth","making decisions", "health and fitness", "mental health", "productivity"]
-
-
         
-
-        <!DOCTYPE html>
-<html>
-<head>
-<title>Sort a HTML Table Alphabetically</title>
-<style>
-table {
-  border-spacing: 0;
-  width: 100%;
-  border: 1px solid #ddd;
-}
-
-th, td {
-  text-align: left;
-  padding: 16px;
-}
-
-tr:nth-child(even) {
-  background-color: #f2f2f2
-}
-</style>
-</head>
-<body>
-
-<p>Click the button to sort the table alphabetically, by name:</p>
-<p><button onclick="sortTable()">Sort</button></p>
-
-
-
-<script>
-function sortTable() {
+        
+        
+        
+        function sortTable() {
   var table, rows, switching, i, x, y, shouldSwitch;
   table = document.getElementById("myTable");
   switching = true;
@@ -135,7 +123,7 @@ function sortTable() {
     }
   }
 }
-</script>
+
 
 
 
