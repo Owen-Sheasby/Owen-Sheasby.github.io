@@ -98,7 +98,7 @@
         
         
         
-        function sortZA) {
+        function sortZA() {
             var table, rows, switching, i, x, y, shouldSwitch;
             table = document.getElementById("myTable");
             switching = true;
@@ -138,10 +138,10 @@
             var i, temp
             for (i in topicWithLinks){
               
-              if topicWithLinks[i]>topicWithLinks[i+1]{
-                temp = i
-                i+1 =i
-                i  = temp
+              if (topicWithLinks[i]>topicWithLinks[i+1]){
+                temp = i;
+                i+1 = i;
+                i  = temp;
 
                 rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
               
