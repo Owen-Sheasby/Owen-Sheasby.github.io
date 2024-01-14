@@ -46,8 +46,9 @@
     <button style ="background-color:#333333;color:chartreuse;border-radius:1000px; width: 75px; height: 30px;" type="button" onclick="sortZA();" value="Go to start page">Sort Z-A</button>
     <button style ="background-color:#333333;color:chartreuse;border-radius:1000px; width: 75px; height: 30px;" type="button" onclick="sortByTopic() ;" value="Go to start page">Sort by topic</button>
 
+    topicWithLinks = ["wealth","making decisions", "health and fitness", "mental health", "productivity"]
 
-    p>Click the button to sort the table alphabetically, by name:</p>
+    <p>Click the button to sort the table alphabetically, by name:</p>
     <p><button onclick="sortZA()">Sort</button></p>
 
     <table id="myTable">
@@ -73,6 +74,10 @@
         </tr>
         <tr>
           <td>productivity</td>
+          <td>environement design, habits</td>
+        </tr>
+        <tr>
+          <td>topicWithLinks[1]</td>
           <td>environement design, habits</td>
         </tr>
       </table>
@@ -142,7 +147,7 @@
               
               if (topicWithLinks[i]>topicWithLinks[i+1]){
                 temp = i;
-                i+1 = i;
+                [i+1] = i;
                 i  = temp;
 
                 rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
