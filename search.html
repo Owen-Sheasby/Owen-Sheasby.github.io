@@ -41,12 +41,16 @@
 <body style="background-color:black;">
 
 
+
+    myList = {["wealth","making decisions", "health and fitness", "mental health", "productivity"]};
+
+
     <button style ="background-color:#333333;color:chartreuse;border-radius:1000px; width: 75px; height: 30px;" type="button" onclick="location.href='index.html' ;" value="Go to start page">HOME</button>
     <button style ="background-color:#333333;color:chartreuse;border-radius:1000px; width: 75px; height: 30px;" type="button" onclick="sortAZ()"; value="Go to start page">Sort A-Z</button>
     <!--<button style ="background-color:#333333;color:chartreuse;border-radius:1000px; width: 75px; height: 30px;" type="button" onclick="sortZA();" value="sort ZA">Sort Z-A</button>--->
     <button style ="background-color:#333333;color:chartreuse;border-radius:1000px; width: 75px; height: 30px;" type="button" onclick="sortByTopic() ;" value="Go to start page">Sort by topic</button>
 
-    <!--var topicWithLinks = ["wealth","making decisions", "health and fitness", "mental health", "productivity"]-->
+    <var>topicWithLinks = ["wealth","making decisions", "health and fitness", "mental health", "productivity"] </var>
 
     <p>Click the button to sort the table alphabetically, by name:</p>
     <p><button onclick="sortZA()">Sort</button></p>
@@ -65,19 +69,19 @@
           <td></td>
         </tr>
         <tr>
-          <td>health and fitness</td>
+          <td><a href="https://owen-sheasby.github.io/healthandfitness.html"></a>health and fitness</td>
           <td>nutrition, exercise</td>
         </tr>
         <tr>
-          <td>mental health</td>
+          <td><a href="https://owen-sheasby.github.io/mentalhealth.html"></a>mental health</td>
           <td>nature, silent time, dopamine management</td>
         </tr>
         <tr>
-          <td>productivity</td>
+          <td><a href="https://owen-sheasby.github.io/productivity.html"></a>productivity</td>
           <td>environement design, habits</td>
         </tr>
         <tr>
-          <td>topicWithLinks[1]</td>
+          <td>(myList[1])</td>
           <td>environement design, habits</td>
         </tr>
       </table>
