@@ -149,14 +149,14 @@ function sortAZ(){
 
     for (i in range (1,row.length-1))
     //i = 1; i <(row.length-1); i++)
-  {shouldSwitch = false;
-  rowN = row[i].getElementsByTagName("td")[0];
+        {shouldSwitch = false;
+        rowN = row[i].getElementsByTagName("td")[0];
   //rowN = row[i].getElementsByTagName("td")
-  rowNadd1 = row[i+1].getElementsByTagName("td")[0];
+        rowNadd1 = row[i+1].getElementsByTagName("td")[0];
   
-  if (rowN.innerHTML.toLowerCase()>rowNadd1.innerHTML.toLowerCase()){
-    shouldSwitch =true;
-    break;
+        if (rowN.innerHTML.toLowerCase()>rowNadd1.innerHTML.toLowerCase()){
+          shouldSwitch =true;
+          break;
   }
   
 
@@ -176,7 +176,7 @@ if (shouldSwitch){
 
 function sortZA() {
   var table, rows, switching, i, x, y, shouldSwitch;
-  table = document.getElementById("myTable");
+  table = document.getElementById("topicTable");
   switching = true;
   /*Make a loop that will continue until
   no switching has been done:*/
