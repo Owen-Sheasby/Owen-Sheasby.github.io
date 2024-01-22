@@ -90,11 +90,7 @@
           <td>environement design, habits</td>
           <td>habits</td>
         </tr>
-        <tr>
-          <td><var myList[1]>myList[1]</var></td>
-          <td>environement design</td>
-          <td>habits</td>
-        </tr>
+      
       </table>
       
       
@@ -147,14 +143,14 @@ function sortAZ(){
     switching = false;
     row = table.row;
 
-    for (i in range (1,row.length-1))
+    for (i = 1; i < (rows.length - 1); i++)
     //i = 1; i <(row.length-1); i++)
         {shouldSwitch = false;
         rowN = row[i].getElementsByTagName("td")[0];
   //rowN = row[i].getElementsByTagName("td")
         rowNadd1 = row[i+1].getElementsByTagName("td")[0];
   
-        if (rowN.innerHTML.toLowerCase()>rowNadd1.innerHTML.toLowerCase()){
+        if (rowN.innerHTML.toLowerCase() > rowNadd1.innerHTML.toLowerCase()){
           shouldSwitch =true;
           break;
   }
