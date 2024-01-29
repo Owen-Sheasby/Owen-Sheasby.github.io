@@ -41,7 +41,7 @@
 <body style="background-color:black;">
 
 
-
+    <var testList = {1,2,3,4}></var>
     <var myList = {["wealth","making decisions", "health and fitness", "mental health", "productivity"]};></var>
 
 
@@ -49,7 +49,7 @@
     <button style ="background-color:#333333;color:chartreuse;border-radius:1000px; width: 75px; height: 30px;" type="button" onclick="sortAZ()";>Sort A-Z</button>
     <button style ="background-color:#333333;color:chartreuse;border-radius:1000px; width: 75px; height: 30px;" type="button" onclick="sortZA();" value="sort ZA">Sort Z-A</button>
     <button style ="background-color:#333333;color:chartreuse;border-radius:1000px; width: 75px; height: 30px;" type="button" onclick="sortByTopic() ;" value="Go to start page">Sort by topic</button>
-
+    <button style ="background-color:#333333;color:chartreuse;border-radius:1000px; width: 75px; height: 30px;" type="button" onclick="testBubble() ;" value="Go to start page">test bubble</button>
     <!--<var>topicWithLinks = ["wealth","making decisions", "health and fitness", "mental health", "productivity"] </var>-->
 
     <!--<p>Click the button to sort the table alphabetically, by name:</p>
@@ -206,7 +206,26 @@ function sortZA() {
 }
 
 
-        
+    
+    function testBubble(){
+
+      while (amountSwitched > 0){amountSwitched = 0
+
+        for (i in testList){
+          if (testList[n]>testList[n+1]){
+            temp = testList[n];
+            testList[n]=testList[n+1];
+            testList[n+1] = temp;
+            amountSwitched = amountSwitched + 1;
+
+            }
+              }
+          }
+
+          console.log(testList)
+  
+  
+  }
 
 
 
