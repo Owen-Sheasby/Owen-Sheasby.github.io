@@ -140,7 +140,7 @@ function sortAZ(){
   isSwitching = true;
 
   while (isSwitching){
-    switching = false;
+    isSwitching = false;
     row = table.row;
 
     for (i = 1; i < (rows.length - 1); i++)
@@ -160,7 +160,7 @@ function sortAZ(){
 
 if (shouldSwitch){
   row[i].parentNode.insertBefore(row[i+1], rows[i]);
-  switching = true;
+  isSwitching = true;
 }
 
   }
