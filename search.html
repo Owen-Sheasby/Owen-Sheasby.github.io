@@ -143,15 +143,15 @@ function sortAZ(){
     isSwitching = false;
     row = table.row;
 
-    for (i = 1; i < (row.length - 1); i++)
+    for (i = 1; i < (row.length - 1); i++){
     //i = 1; i <(row.length-1); i++)
-        {shouldSwitch = false;
+        shouldSwitch = false;
         rowN = row[i].getElementsByTagName("TD")[0];
   //rowN = row[i].getElementsByTagName("td")
-        rowNadd1 = row[i+1].getElementsByTagName("TD")[0];
+        rowNadd1 = row[i + 1].getElementsByTagName("TD")[0];
   
         if (rowN.innerHTML.toLowerCase() > rowNadd1.innerHTML.toLowerCase()){
-          shouldSwitch =true;
+          shouldSwitch = true;
           break;
   }
   
