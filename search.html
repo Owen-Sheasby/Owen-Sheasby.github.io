@@ -184,27 +184,27 @@ if (shouldSwitch){
 
 
 
-function sortZA() {
+/* function sortZA() {
   var table, rows, switching, i, x, y, shouldSwitch;
   table = document.getElementById("topicTable");
   switching = true;
   /*Make a loop that will continue until
   no switching has been done:*/
-  while (switching) {
+  /*while (switching) {
     //start by saying: no switching is done:
     switching = false;
     rows = table.rows;
     /*Loop through all table rows (except the
     first, which contains table headers):*/
-    for (i = 1; i < (rows.length - 1); i++) {
+    /*for (i = 1; i < (rows.length - 1); i++) {
       //start by saying there should be no switching:
       shouldSwitch = false;
       /*Get the two elements you want to compare,
       one from current row and one from the next:*/
-      x = rows[i].getElementsByTagName("TD")[0];
-      y = rows[i + 1].getElementsByTagName("TD")[0];
+      //x = rows[i].getElementsByTagName("TD")[0];
+      //y = rows[i + 1].getElementsByTagName("TD")[0];
       //check if the two rows should switch place:
-      if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
+      /*if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
         //if so, mark as a switch and break the loop:
         shouldSwitch = true;
         break;
@@ -213,11 +213,68 @@ function sortZA() {
     if (shouldSwitch) {
       /*If a switch has been marked, make the switch
       and mark that a switch has been done:*/
-      rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+      /*rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
       switching = true;
     }
   }
+} */
+
+
+
+
+
+function sortZA(){
+  var table, row, isSwitching, i, rowN, rowNadd1, shouldSwitch;
+  table = document.getElementById("topicTable");
+  isSwitching = true;
+
+  while (isSwitching){
+    isSwitching = false;
+    row = table.rows;
+
+    for (i = 1; i < (row.length - 1); i++){
+    //i = 1; i <(row.length-1); i++)
+        shouldSwitch = false;
+        rowN = row[i].getElementsByTagName("TD")[0];
+  //rowN = row[i].getElementsByTagName("td")
+        rowNadd1 = row[i + 1].getElementsByTagName("TD")[0];
+  
+        if (rowN.innerHTML.toLowerCase() < rowNadd1.innerHTML.toLowerCase()){
+          shouldSwitch = true;
+          break;
+  }
+  
+
 }
+
+if (shouldSwitch){
+  row[i].parentNode.insertBefore(row[i + 1], row[i]);
+  isSwitching = true;
+}
+
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
     
